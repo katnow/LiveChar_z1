@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="preview/css/livechat.css">
     <link rel="stylesheet" href="preview/css/style.css">
 
-
     <script type="text/javascript" src="preview/js/jquery.js"></script>
     <script type="text/javascript" src="preview/js/jquery-easing.js"></script>
-    <!-- <script type="text/javascript" src="preview/js/scripts.js"></script> -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -22,16 +20,7 @@
     <script type="text/javascript">
         function vls() { return $(window).width() > 797 ? false : true }
     </script>
-    <style type="text/css">
-        #livechat-compact-container,
-        #livechat-full {
-            display: block;
-        }
-
-        iframe {
-            display: block;
-        }
-    </style>
+    
     <div id="top-container">
         <div id="top">
             <div id="top-wrapper">
@@ -47,7 +36,7 @@
         <div id="top-shadow"></div>
     </div>
 
-    <span class="indicator-down"></span>
+    <span class="indicator-down" ></span>
 
     <div id="content">
         <span class="sample">
@@ -84,13 +73,7 @@
 
     <script type="text/javascript" src="tracks.js?time=1"></script>
     <script type="text/javascript" async="" src="https://cdn.livechatinc.com/staging/tracking.js"></script>
-    <style>
-        iframe {
-            opacity: 1!important;
-        }
-    </style>
-    <script type="text/javascript">
-
+    <script>
         window.__lc = window.__lc || {};
         window.__lc.license = 14290572;
 
@@ -124,7 +107,7 @@
                         param,
                         loc = document.location.toString();
 
-                     $('#teaser h1 a').click(function (e) {
+                    $('#teaser h1 a').click(function (e) {
                         e.preventDefault();
                         showPreview(e.target.attributes[0].value)
                         $('#teaser .previewSampleWebsite').fadeOut('fast', function () {
@@ -166,7 +149,7 @@
                     // get license number from url
                     matches = loc.match(/(preview|licence)\/(\d+)(\/(\d+)*)?/);
 
-                    
+
                     window.LC_API = window.LC_API || {
                     };
                     LC_API.on_before_load = function () {
@@ -193,7 +176,7 @@
                     LC_API.on_chat_window_opened = function () {
                         $('.indicator-down').hide();
                     }
-                   if (matches == null) {
+                    if (matches == null) {
                         // license number not provided in the URL
                         return false;
                     }
@@ -233,7 +216,6 @@
                 Preview.init();
             });
     </script>
-
 
 </body>
 
